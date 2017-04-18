@@ -54,7 +54,7 @@
                 // get the current <use>
                 var use = uses[index], parent = use.parentNode, svg = getSVGAncestor(parent);
                 if (svg) {
-                    var src = use.getAttribute("xlink:href") || use.getAttribute("href");
+                    var src = use.getAttribute("xlink:href") || use.getAttribute("href") || use.getAttribute("data-href");
                     // if running with legacy support
                     if (nosvg) {
                         // create a new fallback image
